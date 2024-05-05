@@ -21,7 +21,6 @@ class TaskController extends Controller
         $data = $request->validate([
             'title' => 'required',
             'description' => 'nullable',
-            'completed' => 'nullable|boolean'
         ]);
 
         $newTask = Task::create($data);
@@ -38,7 +37,6 @@ class TaskController extends Controller
         $data = $request->validate([
             'title' => 'required',
             'description' => 'nullable',
-            'completed' => 'nullable|boolean'
         ]);
 
         $task->update($data);
